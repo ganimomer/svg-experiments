@@ -1,0 +1,49 @@
+<html>
+<head>
+  <style>
+
+  #with-img {
+    width:32;
+    height: 32;
+    border: 1px solid red;
+  }
+
+  .svg-bg {
+    border: 1px dashed green;
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+  }
+
+  #with-id {
+    background: url(sprites.svg#icon-menu) no-repeat;
+  }
+
+  #with-svgView {
+    background: url("sprites.svg#svgView(viewBox(0, 32, 32, 32))") no-repeat;
+  }
+
+  #with-bg-position {
+    background: url(sprites.svg) no-repeat;
+    background-size: 32px 64px;
+    background-position: 0 -32px;
+  }
+  </style>
+</head>
+<body>
+  <h1></h1>
+  <h4>img tag</h4>
+  <img src="sprites.svg#icon-menu" id="with-img"/>
+  <h4>background with id tag</h4>
+  <div class="svg-bg" id="with-id"></div>
+  <h4>background with svgView</h4>
+  <div class="svg-bg" id="with-svgView"></div>
+  <h4>background with background-position</h4>
+  <div class="svg-bg" id="with-bg-position"></div>
+
+  <script>
+  var arr = navigator.userAgent
+  document.querySelector('h1').innerHTML = navigator.userAgent
+  </script>
+</body>
+</html>
